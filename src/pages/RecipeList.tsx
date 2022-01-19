@@ -18,10 +18,11 @@ function RecipeList(search: String) {
     return <Loader />;
   }
 
-  if (!recipes) {
+  if (recipes.length == 0) {
     return (
       <p>
-        No recipes exist yet, why not <Link to="/recipes/add">create one?</Link>
+        No recipes match this criteria, why not{" "}
+        <Link to="/recipes/add">create one?</Link>
       </p>
     );
   }
