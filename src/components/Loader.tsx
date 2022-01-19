@@ -1,5 +1,5 @@
 import React from "react";
-import styled from 'styled-components';
+import styled from "styled-components";
 
 const Loader = styled.div`
   text-align: center;
@@ -9,14 +9,19 @@ const Loader = styled.div`
   height: 48px;
   border-radius: 50%;
   border: 4px solid;
-  border-color: #144FCC #144FCC rgba(20,79,204,0.30000000000000004) rgba(20,79,204,0.30000000000000004);
+  border-color: #144fcc #144fcc rgba(20, 79, 204, 0.30000000000000004)
+    rgba(20, 79, 204, 0.30000000000000004);
   -webkit-animation: spin 0.8s infinite linear;
   animation: spin 0.8s infinite linear;
 
   @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
   }
-`
+`;
 
-export default Loader
+export default Loader;

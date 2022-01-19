@@ -1,6 +1,6 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 import React from "react";
-import {BigText, Text} from "./Text";
+import { BigText, Text } from "./Text";
 
 export const Button = styled.button`
   && {
@@ -33,39 +33,33 @@ export const Button = styled.button`
 export const NeutralButton = styled(Button)`
   && {
     background: transparent;
-    border-color: #9EABBE;
-    color: #144FCC;
+    border-color: #9eabbe;
+    color: #144fcc;
 
     &:hover {
       background-color: transparent;
-      border: 1px solid #144FCC;
+      border: 1px solid #144fcc;
     }
   }
 `;
 
-
-
 const BackArrow = (props: React.ButtonHTMLAttributes<any>) => (
-    <div >
-        <button {...props} >
-            <svg viewBox="0 0 24 24" width="1em" height="1em">
-                <path d="M6.414 13l2.293 2.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 1.414L6.414 11H20a1 1 0 010 2H6.414z"/>
-            </svg>
-        </button>
-        {props.children &&
-            <BigText>{props.children}</BigText>
-        }
-    </div>
-)
-
+  <div>
+    <button {...props}>
+      <svg viewBox="0 0 24 24" width="1em" height="1em">
+        <path d="M6.414 13l2.293 2.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 1.414L6.414 11H20a1 1 0 010 2H6.414z" />
+      </svg>
+    </button>
+    {props.children && <BigText>{props.children}</BigText>}
+  </div>
+);
 
 export const BackButton = styled(BackArrow)`
-  &
-  {
+  & {
     z-index: 1;
     margin: 5px;
     background: white;
-    border: 1px solid #C9D3DF;
+    border: 1px solid #c9d3df;
     box-sizing: border-box;
     box-shadow: 0px 1px 2px rgb(0 0 0 / 8%);
     border-radius: 4px;
@@ -74,17 +68,18 @@ export const BackButton = styled(BackArrow)`
     width: 32px;
     &:hover {
       cursor: pointer;
-      border: 1px solid #9EABBE;
-      box-shadow: 0px 0px 0px 1px rgb(50 50 93 / 5%), 0px 2px 6px rgb(50 50 93 / 8%);
+      border: 1px solid #9eabbe;
+      box-shadow: 0px 0px 0px 1px rgb(50 50 93 / 5%),
+        0px 2px 6px rgb(50 50 93 / 8%);
     }
     & svg {
-        fill: #4C5566;
-        color: #4C5566;
-        vertical-align: middle;
-        font-size: 24px;
+      fill: #4c5566;
+      color: #4c5566;
+      vertical-align: middle;
+      font-size: 24px;
       & path {
-          fill: #4C5566;
-      }      
+        fill: #4c5566;
+      }
     }
   }
 `;
@@ -97,16 +92,16 @@ export const WarningButton = styled(Button)`
   }
 `;
 
-
-
 const SvgCrossButton = (props: React.ButtonHTMLAttributes<any>) => (
-        <button {...props}>
-            <svg viewBox="0 0 24 24" width="1em" height="1em">
-                <path fillRule="evenodd"
-                      d="M13.414 12l4.293 4.293a1 1 0 01-1.414 1.414L12 13.414l-4.293 4.293a1 1 0 11-1.414-1.414L10.586 12 6.293 7.707a1 1 0 011.414-1.414L12 10.586l4.293-4.293a1 1 0 011.414 1.414L13.414 12z"></path>
-            </svg>
-        </button>
-)
+  <button {...props}>
+    <svg viewBox="0 0 24 24" width="1em" height="1em">
+      <path
+        fillRule="evenodd"
+        d="M13.414 12l4.293 4.293a1 1 0 01-1.414 1.414L12 13.414l-4.293 4.293a1 1 0 11-1.414-1.414L10.586 12 6.293 7.707a1 1 0 011.414-1.414L12 10.586l4.293-4.293a1 1 0 011.414 1.414L13.414 12z"
+      ></path>
+    </svg>
+  </button>
+);
 
 export const CrossButton = styled(SvgCrossButton)`
   && {

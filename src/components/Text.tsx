@@ -1,6 +1,5 @@
 import React from "react";
-import styled from 'styled-components';
-
+import styled from "styled-components";
 
 export const Text = styled.span`
   font-size: 14px;
@@ -9,9 +8,8 @@ export const Text = styled.span`
   text-align: left;
   vertical-align: baseline;
   text-transform: unset;
-  color: #4C5566;
+  color: #4c5566;
 `;
-
 
 export const BigText = styled.span`
   font-size: 20px;
@@ -21,7 +19,6 @@ export const BigText = styled.span`
   vertical-align: baseline;
   text-transform: unset;
 `;
-
 
 export const Title = styled.h1`
   font-size: 36px;
@@ -34,11 +31,10 @@ export const Title = styled.h1`
   text-align: left;
   vertical-align: baseline;
   text-transform: unset;
-  color: #1D2C3C;
+  color: #1d2c3c;
   margin: 20px auto;
   max-width: 850px;
 `;
-
 
 export const Subtitle = styled.h2`
   font-size: 32px;
@@ -51,11 +47,10 @@ export const Subtitle = styled.h2`
   text-align: left;
   vertical-align: baseline;
   text-transform: unset;
-  color: #1D2C3C;
+  color: #1d2c3c;
   margin: 20px auto;
   max-width: 850px;
 `;
-
 
 export const SmallSubtitle = styled.h3`
   font-size: 26px;
@@ -68,7 +63,7 @@ export const SmallSubtitle = styled.h3`
   text-align: left;
   vertical-align: baseline;
   text-transform: unset;
-  color: #1D2C3C;
+  color: #1d2c3c;
   margin: 20px auto;
   max-width: 850px;
 `;

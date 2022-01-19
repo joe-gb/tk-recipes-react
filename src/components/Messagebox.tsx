@@ -1,13 +1,12 @@
 import React from "react";
-import styled from 'styled-components';
-
+import styled from "styled-components";
 
 export const Messagebox = styled.div`
   & {
-    background: #FFFFFF;
+    background: #ffffff;
     border-radius: 4px;
     border: 1px solid #fff;
-    border-left: 4px solid #144FCC;
+    border-left: 4px solid #144fcc;
     padding: 0px 20px;
 
     & h3 {
@@ -19,30 +18,28 @@ export const Messagebox = styled.div`
       margin: 20px auto;
       font-size: 14px;
       font-weight: 400;
-      color: #1D2C3C;
+      color: #1d2c3c;
     }
   }
 `;
 
-
 export const Successbox = styled(Messagebox)`
   & {
-    background: #E5FFF4;
-    border: 1px solid #E5FFF4;
+    background: #e5fff4;
+    border: 1px solid #e5fff4;
     border-radius: 4px;
     border-left: 0px;
     & h3 {
       font-size: 16px;
       font-weight: 600;
-      color: #000000CC;
+      color: #000000cc;
     }
   }
 `;
 
-
 export const Errorbox = styled(Successbox)`
   & {
-    background: #FFE5E5;
-    border: 1px solid #FFE5E5;
+    background: #ffe5e5;
+    border: 1px solid #ffe5e5;
   }
 `;

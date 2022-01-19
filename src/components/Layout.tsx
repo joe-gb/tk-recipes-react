@@ -1,6 +1,6 @@
-import React, {useState} from "react";
-import styled from 'styled-components';
-import {Link} from "react-router-dom";
+import React, { useState } from "react";
+import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 export const Row = styled.div`
   display: flex;
@@ -13,11 +13,10 @@ export const Row = styled.div`
   }
 `;
 
-
 export const Container = styled.div`
   max-width: 850px;
   margin: 0 auto;
-`
+`;
 
 export const Header = styled.div`
   padding: 0px 20px;
@@ -28,7 +27,7 @@ export const Header = styled.div`
     height: 40px;
     vertical-align: middle;
   }
-`
+`;
 
 export const Nav = styled(Link)`
   display: inline-block;
@@ -40,34 +39,34 @@ export const Nav = styled(Link)`
   &:hover {
     text-decoration: underline;
   }
-`
+`;
 
 const Hamburger = () => (
-    <svg fill="white" viewBox="0 0 100 80" width="40" height="40">
-        <rect width="100" height="10"></rect>
-        <rect y="30" width="100" height="10"></rect>
-        <rect y="60" width="100" height="10"></rect>
-    </svg>)
+  <svg fill="white" viewBox="0 0 100 80" width="40" height="40">
+    <rect width="100" height="10"></rect>
+    <rect y="30" width="100" height="10"></rect>
+    <rect y="60" width="100" height="10"></rect>
+  </svg>
+);
 
-const NavbarComponent = ({children, ...props}: React.HTMLAttributes<HTMLDivElement>) => {
+const NavbarComponent = ({
+  children,
+  ...props
+}: React.HTMLAttributes<HTMLDivElement>) => {
+  const [menu, setMenu] = useState(false);
 
-    const [menu, setMenu] = useState(false);
-
-    return (<>
-        <div {...props}>
-            <button onClick={() => setMenu(!menu)}>
-                <Hamburger/>
-            </button>
-            <div className={(menu) ? "active" : ""}>
-                {children}
-            </div>
-        </div>
-
-    </>)
-
-}
+  return (
+    <>
+      <div {...props}>
+        <button onClick={() => setMenu(!menu)}>
+          <Hamburger />
+        </button>
+        <div className={menu ? "active" : ""}>{children}</div>
+      </div>
+    </>
+  );
+};
 export const Navbar = styled(NavbarComponent)`
-  
   display: inline-block;
   & button {
     display: none;
@@ -103,6 +102,5 @@ export const Navbar = styled(NavbarComponent)`
     & button {
       display: block;
     }
-
   }
-`
+`;
