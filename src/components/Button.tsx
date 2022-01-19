@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import React from "react";
-import { BigText, Text } from "./Text";
 
 export const Button = styled.button`
   && {

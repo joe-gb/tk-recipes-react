@@ -1,5 +1,4 @@
-// http://localhost:8000/recipes
-import React, { useContext } from "react";
+import React from "react";
 import useAxios from "axios-hooks";
 import { AxiosError } from "axios";
 
