@@ -21,16 +21,11 @@ const RecipeService: Function = () => {
     search: string
   ): [Array<Recipe>, boolean, AxiosError | null] => {
     const name = search ? "&name=" + search : "";
-    let recipes: Array<Recipe> = [];
     const [{ data, loading, error }] = useAxios({
       url: "http://localhost:8000/recipes/" + "?" + update + name,
       method: "GET",
     });
-
-    if (data) {
-      recipes = data.map((recipe: Recipe) => recipe);
-    }
-    return [recipes, loading, error];
+    return [data, loading, error];
   };
 
   const GetRecipe: Function = (
