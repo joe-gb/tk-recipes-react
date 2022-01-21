@@ -12,67 +12,27 @@ import { Row } from "../components/Layout";
 import { Errorbox, Successbox } from "../components/Messagebox";
 import Loader from "../components/Loader";
 
-function CreateEditForm() {
-  const { id } = useParams();
-  const initial_recipe: Recipe = { name: "" };
+const CreateEditForm = (editRecipe: Recipe) => {
   const form_errors = { name: "", ingredient: "" };
 
-  const [recipe, setRecipe] = useState(initial_recipe);
+  const [recipe, setRecipe] = useState(editRecipe);
   const [validationerrors, setValidationerrors] = useState(form_errors);
   const [ingredient, setIngredient] = useState("");
   const [stage, setStage] = useState(0);
   const [createdRecipe, createLoading, createError, triggerSave] =
     RecipeService.SaveRecipe(recipe);
-  const [getRecipe, getLoading, getError, TriggerGet]: [
-    Recipe,
-    boolean,
-    AxiosError,
-    Function
-  ] = RecipeService.GetRecipe(id, true);
 
-  if (getLoading || createLoading) {
+  if (createLoading) {
     return <Loader />;
-  }
-
-  if (getError) {
-    return (
-      <>
-        <Subtitle>Oh no ..</Subtitle>
-        <Errorbox>
-          <h3>There was a problem</h3>
-          <p>We couldn't load your recipe</p>
-        </Errorbox>
-        <Text>
-          There was an error retrieving this recipe: {getError.message}
-        </Text>
-      </>
-    );
-  }
-
-  // Get initial state of recipe by ID, for editing existing recipes
-  if (id) {
-    if (recipe.id == undefined) {
-      if (!getLoading && !getRecipe && !getError) {
-        TriggerGet();
-      }
-      if (getRecipe != undefined) {
-        setRecipe(getRecipe);
-      }
-    }
   }
 
   // Start over, reset all context
   const startOver = () => {
     setStage(0);
-    setRecipe(initial_recipe);
+    setRecipe(editRecipe);
     setIngredient("");
     setValidationerrors(form_errors);
   };
-
-  // Prevents ID being carried over from edit page to new recipe
-  if (recipe.id != undefined && getRecipe != undefined && !id) {
-    startOver();
-  }
 
   // Name validator
   const validateName = (name: String | undefined) => {
@@ -278,14 +238,45 @@ function CreateEditForm() {
       );
     }
   }
+};
+
+export function RecipeCreate() {
+  const initial_recipe: Recipe = { name: "" };
+  return <Card>{CreateEditForm(initial_recipe)}</Card>;
 }
 
-function RecipeCreateEdit() {
+export function RecipeEdit() {
+  const { id } = useParams();
+
+  const [getRecipe, getLoading, getError, TriggerGet]: [
+    Recipe,
+    boolean,
+    AxiosError,
+    Function
+  ] = RecipeService.GetRecipe(id, true);
+
+  // Get initial state of recipe by ID, for editing existing recipes
+  if (!getLoading && !getRecipe && !getError) {
+    TriggerGet();
+  }
+
+  if (getError) {
+    return (
+      <>
+        <Subtitle>Oh no ..</Subtitle>
+        <Errorbox>
+          <h3>There was a problem</h3>
+          <p>We couldn't load your recipe</p>
+        </Errorbox>
+        <Text>
+          There was an error retrieving this recipe: {getError.message}
+        </Text>
+      </>
+    );
+  }
   return (
     <Card>
-      <CreateEditForm />
+      <CreateEditForm key={getRecipe?.id || 0} {...getRecipe} />
     </Card>
   );
 }
-
-export default RecipeCreateEdit;
