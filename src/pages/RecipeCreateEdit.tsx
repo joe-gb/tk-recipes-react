@@ -282,11 +282,9 @@ function CreateEditForm() {
 
 function RecipeCreateEdit() {
   return (
-    <>
-      <Card>
-        <CreateEditForm />
-      </Card>
-    </>
+    <Card>
+      <CreateEditForm />
+    </Card>
   );
 }
 
