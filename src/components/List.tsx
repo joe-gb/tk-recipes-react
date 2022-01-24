@@ -1,5 +1,8 @@
 import React from "react";
 import styled from "styled-components";
+import { Ingredient, Recipe } from "../services/Recipe";
+import { SmallSubtitle } from "./Text";
+import { Link } from "react-router-dom";
 
 export const ListItem = styled.div`
   font-size: 18px;
@@ -16,3 +19,24 @@ export const ListItem = styled.div`
   align-items: center;
   justify-content: space-between;
 `;
+
+export const List = (i: Array<string>) => {
+  const list = i.map((item, index) => (
+    <ListItem key={index.toString()}>{item}</ListItem>
+  ));
+  return list;
+};
+
+interface Link {
+  link: string;
+  text: string;
+}
+
+export const LinkList = (i: Array<Link>) => {
+  const list = i.map((item, index) => (
+    <Link key={index.toString()} to={item.link}>
+      <ListItem key={index.toString()}>{item.text}</ListItem>
+    </Link>
+  ));
+  return list;
+};

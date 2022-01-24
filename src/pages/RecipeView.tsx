@@ -3,26 +3,10 @@ import { Link, useParams } from "react-router-dom";
 import React from "react";
 import { Card } from "../components/Card";
 import { SmallSubtitle, Subtitle } from "../components/Text";
-import { ListItem } from "../components/List";
+import { List, ListItem } from "../components/List";
 import { Row } from "../components/Layout";
 import { Button } from "../components/Button";
 import Loader from "../components/Loader";
-
-// Generate a list of ingredients
-export const ListIngredients = (recipe: Recipe) => {
-  if (recipe.ingredients) {
-    const list = recipe.ingredients.map((ingredient: Ingredient, index) => (
-      <ListItem key={index.toString()}>{ingredient.name}</ListItem>
-    ));
-    return (
-      <>
-        <SmallSubtitle>Ingredients</SmallSubtitle>
-        {list}
-      </>
-    );
-  }
-  return <></>;
-};
 
 function RecipeView() {
   let { id } = useParams();
@@ -40,7 +24,14 @@ function RecipeView() {
   return (
     <Card>
       <Subtitle>{recipe.name}</Subtitle>
-      {ListIngredients(recipe)}
+      {recipe.ingredients && (
+        <>
+          <SmallSubtitle>Ingredients</SmallSubtitle>
+          {List(
+            recipe.ingredients.map((ingredient: Ingredient) => ingredient.name)
+          )}
+        </>
+      )}
       <Row>
         <Link to={"/recipes/edit/" + id}>
           <Button>Edit recipe</Button>

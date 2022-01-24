@@ -4,10 +4,11 @@ import React, { useState } from "react";
 import { Card } from "../components/Card";
 import { Input } from "../components/Input";
 import { Subtitle } from "../components/Text";
-import { ListItem } from "../components/List";
+import { LinkList, ListItem } from "../components/List";
 import Loader from "../components/Loader";
 
-function RecipeList(search: String) {
+function RecipeSearch() {
+  const [search, setSearch] = useState("");
   let [recipes, loading, error] = RecipeService.GetRecipes(search);
 
   if (error) {
@@ -26,21 +27,6 @@ function RecipeList(search: String) {
       </p>
     );
   }
-
-  return (
-    <div>
-      {recipes.map((recipe: Recipe) => (
-        <Link key={recipe.id?.toString()} to={"/recipes/" + recipe.id}>
-          <ListItem>{recipe.name}</ListItem>
-        </Link>
-      ))}
-    </div>
-  );
-}
-
-function RecipeSearch() {
-  const [search, setSearch] = useState("");
-
   return (
     <>
       <Card>
@@ -52,7 +38,16 @@ function RecipeSearch() {
             value={search}
             onChange={(event) => setSearch(event.target.value)}
           />
-          {RecipeList(search)}
+          <div>
+            {LinkList(
+              recipes.map((recipe: Recipe) => {
+                return {
+                  link: "/recipes/" + recipe.id,
+                  text: recipe.name,
+                };
+              })
+            )}
+          </div>
         </div>
       </Card>
     </>

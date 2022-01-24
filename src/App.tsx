@@ -1,6 +1,6 @@
 import React from "react";
 import RecipeList from "./pages/RecipeList";
-import RecipeCreateEdit from "./pages/RecipeCreateEdit";
+import { RecipeEdit, RecipeCreate } from "./pages/RecipeCreateEdit";
 import RecipeView from "./pages/RecipeView";
 import RecipeDelete from "./pages/RecipeDelete";
 import Home from "./pages/Home";
@@ -28,9 +28,9 @@ function App() {
       <article>
         <Title>TK Recipes</Title>
         <Routes>
-          <Route path="/recipes/add" element={<RecipeCreateEdit />} />
+          <Route path="/recipes/add" element={<RecipeCreate />} />
           <Route path="/recipes/:id" element={<RecipeView />} />
-          <Route path="/recipes/edit/:id" element={<RecipeCreateEdit />} />
+          <Route path="/recipes/edit/:id" element={<RecipeEdit />} />
           <Route path="/recipes/delete/:id" element={<RecipeDelete />} />
           <Route path="/recipes" element={<RecipeList />} />
           <Route path="/" element={<Home />} />
