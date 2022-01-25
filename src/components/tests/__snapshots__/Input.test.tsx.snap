@@ -1,0 +1,201 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot test plain label 1`] = `
+.c0 {
+  margin: 10px auto;
+}
+
+.c0 div {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  min-height: 40px;
+  z-index: initial;
+  font-size: 16px;
+  background: #ffffff;
+  caret-color: auto;
+  border: 1px solid #C9D3DF;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  -webkit-transition: opacity 0.2s ease-in-out,border-color 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out,border-color 0.2s ease-in-out;
+}
+
+.c0 div div:hover {
+  border-left: 1px solid #738094;
+  border-right: 1px solid #738094;
+  border-top: 1px solid #738094;
+  border-bottom: 1px solid #738094;
+}
+
+.c0 div input {
+  height: 40px;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0 14px;
+  border-radius: 2px;
+  line-height: 32px;
+  font-size: 16px;
+  border: none;
+  color: #323b4d;
+}
+
+.c0 div input:focus {
+  outline: none;
+}
+
+<div>
+  <div
+    class="c0"
+  >
+    <div>
+      <input
+        id="sc-iCfMLu c0"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Snapshot test with label 1`] = `
+.c1 {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+  vertical-align: baseline;
+  text-transform: unset;
+  margin: 20px auto;
+}
+
+.c0 {
+  margin: 10px auto;
+}
+
+.c0 div {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  min-height: 40px;
+  z-index: initial;
+  font-size: 16px;
+  background: #ffffff;
+  caret-color: auto;
+  border: 1px solid #C9D3DF;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  -webkit-transition: opacity 0.2s ease-in-out,border-color 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out,border-color 0.2s ease-in-out;
+}
+
+.c0 div div:hover {
+  border-left: 1px solid #738094;
+  border-right: 1px solid #738094;
+  border-top: 1px solid #738094;
+  border-bottom: 1px solid #738094;
+}
+
+.c0 div input {
+  height: 40px;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0 14px;
+  border-radius: 2px;
+  line-height: 32px;
+  font-size: 16px;
+  border: none;
+  color: #323b4d;
+}
+
+.c0 div input:focus {
+  outline: none;
+}
+
+<div>
+  <div
+    class="c0"
+  >
+    <label
+      class="c1"
+      for="sc-iCfMLu c0"
+    >
+      Enter your answer
+    </label>
+    <div>
+      <input
+        id="sc-iCfMLu c0"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Snapshot test with placeholder 1`] = `
+.c0 {
+  margin: 10px auto;
+}
+
+.c0 div {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  min-height: 40px;
+  z-index: initial;
+  font-size: 16px;
+  background: #ffffff;
+  caret-color: auto;
+  border: 1px solid #C9D3DF;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  -webkit-transition: opacity 0.2s ease-in-out,border-color 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out,border-color 0.2s ease-in-out;
+}
+
+.c0 div div:hover {
+  border-left: 1px solid #738094;
+  border-right: 1px solid #738094;
+  border-top: 1px solid #738094;
+  border-bottom: 1px solid #738094;
+}
+
+.c0 div input {
+  height: 40px;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0 14px;
+  border-radius: 2px;
+  line-height: 32px;
+  font-size: 16px;
+  border: none;
+  color: #323b4d;
+}
+
+.c0 div input:focus {
+  outline: none;
+}
+
+<div>
+  <div
+    class="c0"
+  >
+    <div>
+      <input
+        id="sc-iCfMLu c0"
+        placeholder="Type here"
+      />
+    </div>
+  </div>
+</div>
+`;

@@ -13,6 +13,7 @@
     "@types/styled-components": "^5.1.20",
     "axios": "^0.24.0",
     "axios-hooks": "^3.0.0",
+    "jest-styled-components": "^7.0.8",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-router": "^6.2.1",
@@ -46,5 +47,15 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "http://localhost:8000/"
+  "proxy": "http://localhost:8000/",
+  "devDependencies": {
+    "svg-jest": "^1.0.1"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.jsx?$": "babel-jest",
+      "^.+\\.svg$": "svg-jest"
+    },
+    "setupFilesAfterEnv": ["<rootDir>/src/setupTests.js"]
+  }
 }

@@ -1,0 +1,122 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Errorbox snapshot test 1`] = `
+.c0 {
+  background: #ffffff;
+  border-radius: 4px;
+  border: 1px solid #fff;
+  border-left: 4px solid #144fcc;
+  padding: 0px 20px;
+}
+
+.c0 h3 {
+  margin: 20px auto;
+  color: #003097;
+}
+
+.c0 p {
+  margin: 20px auto;
+  font-size: 14px;
+  font-weight: 400;
+  color: #1d2c3c;
+}
+
+.c1 {
+  background: #e5fff4;
+  border: 1px solid #e5fff4;
+  border-radius: 4px;
+  border-left: 0px;
+}
+
+.c1 h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #000000cc;
+}
+
+.c2 {
+  background: #ffe5e5;
+  border: 1px solid #ffe5e5;
+}
+
+<div>
+  <div
+    class="c0 c1 c2"
+  >
+    This is an error message
+  </div>
+</div>
+`;
+
+exports[`Messagebox snapshot test 1`] = `
+.c0 {
+  background: #ffffff;
+  border-radius: 4px;
+  border: 1px solid #fff;
+  border-left: 4px solid #144fcc;
+  padding: 0px 20px;
+}
+
+.c0 h3 {
+  margin: 20px auto;
+  color: #003097;
+}
+
+.c0 p {
+  margin: 20px auto;
+  font-size: 14px;
+  font-weight: 400;
+  color: #1d2c3c;
+}
+
+<div>
+  <div
+    class="c0"
+  >
+    This is a message
+  </div>
+</div>
+`;
+
+exports[`Successbox snapshot test 1`] = `
+.c0 {
+  background: #ffffff;
+  border-radius: 4px;
+  border: 1px solid #fff;
+  border-left: 4px solid #144fcc;
+  padding: 0px 20px;
+}
+
+.c0 h3 {
+  margin: 20px auto;
+  color: #003097;
+}
+
+.c0 p {
+  margin: 20px auto;
+  font-size: 14px;
+  font-weight: 400;
+  color: #1d2c3c;
+}
+
+.c1 {
+  background: #e5fff4;
+  border: 1px solid #e5fff4;
+  border-radius: 4px;
+  border-left: 0px;
+}
+
+.c1 h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #000000cc;
+}
+
+<div>
+  <div
+    class="c0 c1"
+  >
+    This is a success message
+  </div>
+</div>
+`;

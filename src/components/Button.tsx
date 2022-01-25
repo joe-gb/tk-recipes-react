@@ -52,7 +52,7 @@ export const WarningButton = styled(Button)`
 
 const SvgCrossButton = (props: React.ButtonHTMLAttributes<any>) => (
   <button {...props}>
-    <svg viewBox="0 0 24 24" width="1em" height="1em">
+    <svg data-testid="svg-cross" viewBox="0 0 24 24" width="1em" height="1em">
       <path
         fillRule="evenodd"
         d="M13.414 12l4.293 4.293a1 1 0 01-1.414 1.414L12 13.414l-4.293 4.293a1 1 0 11-1.414-1.414L10.586 12 6.293 7.707a1 1 0 011.414-1.414L12 10.586l4.293-4.293a1 1 0 011.414 1.414L13.414 12z"

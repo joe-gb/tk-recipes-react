@@ -1,0 +1,104 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LinkList snapshot test 1`] = `
+.c0 {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+  vertical-align: baseline;
+  text-transform: unset;
+  color: #4c5566;
+  background-color: #eff2f7;
+  margin: 2px 0px 2px 0px;
+  padding: 10px 20px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+<div>
+  <a
+    href="/url1/"
+  >
+    <div
+      class="c0"
+    >
+      Link1
+    </div>
+  </a>
+  <a
+    href="/url2/"
+  >
+    <div
+      class="c0"
+    >
+      Link2
+    </div>
+  </a>
+</div>
+`;
+
+exports[`List snapshot test 1`] = `
+.c0 {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+  vertical-align: baseline;
+  text-transform: unset;
+  color: #4c5566;
+  background-color: #eff2f7;
+  margin: 2px 0px 2px 0px;
+  padding: 10px 20px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+<div>
+  <div
+    class="c0"
+  >
+    One
+  </div>
+  <div
+    class="c0"
+  >
+    Two
+  </div>
+  <div
+    class="c0"
+  >
+    Three
+  </div>
+  <div
+    class="c0"
+  >
+    Four
+  </div>
+  <div
+    class="c0"
+  >
+    Five
+  </div>
+</div>
+`;

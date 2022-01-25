@@ -67,7 +67,9 @@ const NavbarComponent = ({
         <button onClick={() => setMenu(!menu)}>
           <Hamburger />
         </button>
-        <div className={menu ? "active" : ""}>{children}</div>
+        <div data-testid="navigation" className={menu ? "active" : ""}>
+          {children}
+        </div>
       </div>
     </>
   );
@@ -86,7 +88,7 @@ export const Navbar = styled(NavbarComponent)`
     background: 0;
   }
 
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 1300px) {
     & {
       display: block;
     }
