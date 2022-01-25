@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import { Card } from "../components/Card";
 import { Input } from "../components/Input";
 import { Subtitle } from "../components/Text";
-import { LinkList, ListItem } from "../components/List";
+import { LinkList } from "../components/List";
 import Loader from "../components/Loader";
 
 function RecipeSearch() {
