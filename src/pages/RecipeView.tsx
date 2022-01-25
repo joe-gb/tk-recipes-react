@@ -1,7 +1,6 @@
 import RecipeService, { Ingredient, Recipe } from "../services/Recipe";
 import { Link, useParams } from "react-router-dom";
 import React from "react";
-import { Card } from "../components/Card";
 import { SmallSubtitle, Subtitle } from "../components/Text";
 import { List, ListItem } from "../components/List";
 import { Row } from "../components/Layout";
@@ -22,7 +21,7 @@ function RecipeView() {
   }
 
   return (
-    <Card>
+    <>
       <Subtitle>{recipe.name}</Subtitle>
       {recipe.ingredients && (
         <>
@@ -40,7 +39,7 @@ function RecipeView() {
           <Button>Delete recipe</Button>
         </Link>
       </Row>
-    </Card>
+    </>
   );
 }
 

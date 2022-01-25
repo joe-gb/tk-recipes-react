@@ -4,9 +4,8 @@ import RecipeService, { Recipe, Ingredient } from "../services/Recipe";
 import { AxiosError } from "axios";
 import { useParams } from "react-router-dom";
 import { Button, CrossButton, NeutralButton } from "../components/Button";
-import { Title, SmallSubtitle, Subtitle, Text } from "../components/Text";
+import { SmallSubtitle, Subtitle, Text } from "../components/Text";
 import { Label, Input } from "../components/Input";
-import { Card } from "../components/Card";
 import { ListItem } from "../components/List";
 import { Row } from "../components/Layout";
 import { Errorbox, Successbox } from "../components/Messagebox";
@@ -242,7 +241,7 @@ const CreateEditForm = (editRecipe: Recipe) => {
 
 export function RecipeCreate() {
   const initial_recipe: Recipe = { name: "" };
-  return <Card>{CreateEditForm(initial_recipe)}</Card>;
+  return <>{CreateEditForm(initial_recipe)}</>;
 }
 
 export function RecipeEdit() {
@@ -274,9 +273,5 @@ export function RecipeEdit() {
       </>
     );
   }
-  return (
-    <Card>
-      <CreateEditForm key={getRecipe?.id || 0} {...getRecipe} />
-    </Card>
-  );
+  return <CreateEditForm key={getRecipe?.id || 0} {...getRecipe} />;
 }

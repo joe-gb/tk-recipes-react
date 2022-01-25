@@ -1,7 +1,6 @@
 import RecipeService, { Recipe } from "../services/Recipe";
 import { Link } from "react-router-dom";
 import React, { useState } from "react";
-import { Card } from "../components/Card";
 import { Input } from "../components/Input";
 import { Subtitle } from "../components/Text";
 import { LinkList } from "../components/List";
@@ -29,27 +28,25 @@ function RecipeSearch() {
   }
   return (
     <>
-      <Card>
-        <Subtitle>Recipe Search</Subtitle>
+      <Subtitle>Recipe Search</Subtitle>
+      <div>
+        <Input
+          placeholder="Search recipes"
+          type="text"
+          value={search}
+          onChange={(event) => setSearch(event.target.value)}
+        />
         <div>
-          <Input
-            placeholder="Search recipes"
-            type="text"
-            value={search}
-            onChange={(event) => setSearch(event.target.value)}
-          />
-          <div>
-            {LinkList(
-              recipes.map((recipe: Recipe) => {
-                return {
-                  link: "/recipes/" + recipe.id,
-                  text: recipe.name,
-                };
-              })
-            )}
-          </div>
+          {LinkList(
+            recipes.map((recipe: Recipe) => {
+              return {
+                link: "/recipes/" + recipe.id,
+                text: recipe.name,
+              };
+            })
+          )}
         </div>
-      </Card>
+      </div>
     </>
   );
 }
