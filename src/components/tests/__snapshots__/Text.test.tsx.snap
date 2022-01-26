@@ -1,0 +1,98 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Bigtext snapshot test 1`] = `
+.c0 {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: left;
+  vertical-align: baseline;
+  text-transform: unset;
+}
+
+<div>
+  <span
+    class="c0"
+  >
+    This is big text
+  </span>
+</div>
+`;
+
+exports[`Subtitle snapshot test 1`] = `
+.c0 {
+  font-size: 32px;
+  font-weight: 500;
+  -webkit-letter-spacing: -0.5px;
+  -moz-letter-spacing: -0.5px;
+  -ms-letter-spacing: -0.5px;
+  -webkit-letter-spacing: -0.5px;
+  -moz-letter-spacing: -0.5px;
+  -ms-letter-spacing: -0.5px;
+  letter-spacing: -0.5px;
+  line-height: 40px;
+  text-align: left;
+  vertical-align: baseline;
+  text-transform: unset;
+  color: #1d2c3c;
+  margin: 20px auto;
+  max-width: 850px;
+}
+
+<div>
+  <h2
+    class="c0"
+  >
+    This is a subtitle
+  </h2>
+</div>
+`;
+
+exports[`Text snapshot test 1`] = `
+.c0 {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+  vertical-align: baseline;
+  text-transform: unset;
+  color: #4c5566;
+}
+
+<div>
+  <span
+    class="c0"
+  >
+    This is text
+  </span>
+</div>
+`;
+
+exports[`Title snapshot test 1`] = `
+.c0 {
+  font-size: 36px;
+  font-weight: 600;
+  -webkit-letter-spacing: -0.5px;
+  -moz-letter-spacing: -0.5px;
+  -ms-letter-spacing: -0.5px;
+  -webkit-letter-spacing: -0.5px;
+  -moz-letter-spacing: -0.5px;
+  -ms-letter-spacing: -0.5px;
+  letter-spacing: -0.5px;
+  line-height: 44px;
+  text-align: left;
+  vertical-align: baseline;
+  text-transform: unset;
+  color: #1d2c3c;
+  margin: 20px auto;
+  max-width: 850px;
+}
+
+<div>
+  <h1
+    class="c0"
+  >
+    This is a title
+  </h1>
+</div>
+`;
