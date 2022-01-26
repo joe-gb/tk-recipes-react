@@ -1,0 +1,145 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test recipe list 1`] = `
+.c0 {
+  font-size: 32px;
+  font-weight: 500;
+  -webkit-letter-spacing: -0.5px;
+  -moz-letter-spacing: -0.5px;
+  -ms-letter-spacing: -0.5px;
+  -webkit-letter-spacing: -0.5px;
+  -moz-letter-spacing: -0.5px;
+  -ms-letter-spacing: -0.5px;
+  letter-spacing: -0.5px;
+  line-height: 40px;
+  text-align: left;
+  vertical-align: baseline;
+  text-transform: unset;
+  color: #1d2c3c;
+  margin: 20px auto;
+  max-width: 850px;
+}
+
+.c1 {
+  margin: 10px auto;
+}
+
+.c1 div {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  min-height: 40px;
+  z-index: initial;
+  font-size: 16px;
+  background: #ffffff;
+  caret-color: auto;
+  border: 1px solid #C9D3DF;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  -webkit-transition: opacity 0.2s ease-in-out,border-color 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out,border-color 0.2s ease-in-out;
+}
+
+.c1 div div:hover {
+  border-left: 1px solid #738094;
+  border-right: 1px solid #738094;
+  border-top: 1px solid #738094;
+  border-bottom: 1px solid #738094;
+}
+
+.c1 div input {
+  height: 40px;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0 14px;
+  border-radius: 2px;
+  line-height: 32px;
+  font-size: 16px;
+  border: none;
+  color: #323b4d;
+}
+
+.c1 div input:focus {
+  outline: none;
+}
+
+.c2 {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+  vertical-align: baseline;
+  text-transform: unset;
+  color: #4c5566;
+  background-color: #eff2f7;
+  margin: 2px 0px 2px 0px;
+  padding: 10px 20px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+<div>
+  <h2
+    class="c0"
+  >
+    Recipe Search
+  </h2>
+  <div>
+    <div
+      class="c1"
+    >
+      <div>
+        <input
+          id="sc-iCfMLu c1"
+          placeholder="Search recipes"
+          type="text"
+          value=""
+        />
+      </div>
+    </div>
+    <div>
+      <a
+        href="/recipes/1"
+      >
+        <div
+          class="c2"
+        >
+          Paella
+        </div>
+      </a>
+      <a
+        href="/recipes/2"
+      >
+        <div
+          class="c2"
+        >
+          Pizza
+        </div>
+      </a>
+      <a
+        href="/recipes/3"
+      >
+        <div
+          class="c2"
+        >
+          Sangria
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
+`;
