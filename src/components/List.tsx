@@ -24,12 +24,12 @@ export const List = (i: Array<string>) => {
   return list;
 };
 
-interface Link {
+interface LinkListItem {
   link: string;
   text: string;
 }
 
-export const LinkList = (i: Array<Link>) => {
+export const LinkList = (i: Array<LinkListItem>) => {
   const list = i.map((item, index) => (
     <Link key={index.toString()} to={item.link}>
       <ListItem key={index.toString()}>{item.text}</ListItem>
