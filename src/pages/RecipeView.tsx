@@ -1,8 +1,7 @@
-import RecipeService, { Ingredient, Recipe } from "../services/Recipe";
+import RecipeService, { Ingredient } from "../services/Recipe";
 import { Link, useParams } from "react-router-dom";
-import React from "react";
 import { SmallSubtitle, Subtitle } from "../components/Text";
-import { List, ListItem } from "../components/List";
+import { List } from "../components/List";
 import { Row } from "../components/Layout";
 import { Button } from "../components/Button";
 import Loader from "../components/Loader";

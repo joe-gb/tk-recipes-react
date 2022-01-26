@@ -35,7 +35,7 @@ const CreateEditForm = (editRecipe: Recipe) => {
 
   // Name validator
   const validateName = (name: String | undefined) => {
-    const isValid = name != "";
+    const isValid = name !== "";
     const error = isValid ? "" : "Recipe name cannot be blank";
     setValidationerrors({ ...validationerrors, name: error });
     return isValid;
@@ -43,7 +43,7 @@ const CreateEditForm = (editRecipe: Recipe) => {
 
   // Ingredient validator
   const validateIngredient = (ingredient: String | undefined) => {
-    const isValid = ingredient != "";
+    const isValid = ingredient !== "";
     const error = isValid ? "" : "Ingredient name cannot be blank";
     setValidationerrors({ ...validationerrors, ingredient: error });
     return isValid;
@@ -67,7 +67,7 @@ const CreateEditForm = (editRecipe: Recipe) => {
   const onChangeIngredient = (event: React.ChangeEvent<HTMLInputElement>) => {
     setIngredient(event.target.value);
     const error =
-      event.target.value == "" ? "Ingredient name cannot be blank" : "";
+      event.target.value === "" ? "Ingredient name cannot be blank" : "";
     setValidationerrors({ ...validationerrors, ingredient: error });
   };
 
@@ -117,7 +117,7 @@ const CreateEditForm = (editRecipe: Recipe) => {
       const list = recipe.ingredients.map((ingredient: Ingredient, index) => (
         <ListItem key={index.toString()}>
           {ingredient.name}
-          {showRemove == true && (
+          {showRemove === true && (
             <CrossButton
               title="Delete ingredient"
               key={index + "button"}
@@ -134,7 +134,7 @@ const CreateEditForm = (editRecipe: Recipe) => {
     return <></>;
   };
 
-  if (stage == 1) {
+  if (stage === 1) {
     return (
       <form onSubmit={onSubmitIngredient}>
         <Subtitle>Ingredients</Subtitle>
@@ -162,7 +162,7 @@ const CreateEditForm = (editRecipe: Recipe) => {
       </form>
     );
   }
-  if (stage == 2) {
+  if (stage === 2) {
     return (
       <form onSubmit={onSubmitRecipe}>
         <Subtitle>Confirm your recipe</Subtitle>
@@ -181,7 +181,7 @@ const CreateEditForm = (editRecipe: Recipe) => {
       </form>
     );
   }
-  if (stage == 3) {
+  if (stage === 3) {
     return (
       <>
         {createError && (
@@ -214,28 +214,27 @@ const CreateEditForm = (editRecipe: Recipe) => {
     );
   } else {
     // Stage 0
-    {
-      return (
-        <>
-          <Subtitle>Build your recipe</Subtitle>
-          <form onSubmit={onSubmitRecipeName}>
-            <Label>
-              What is your recipe called?
-              <Input
-                error={validationerrors.name}
-                placeholder="Recipe name"
-                autoFocus
-                name="name"
-                value={recipe.name}
-                onChange={onChangeRecipeName}
-                type="text"
-              />
-            </Label>
-            <Button type="submit">Submit</Button>
-          </form>
-        </>
-      );
-    }
+
+    return (
+      <>
+        <Subtitle>Build your recipe</Subtitle>
+        <form onSubmit={onSubmitRecipeName}>
+          <Label>
+            What is your recipe called?
+            <Input
+              error={validationerrors.name}
+              placeholder="Recipe name"
+              autoFocus
+              name="name"
+              value={recipe.name}
+              onChange={onChangeRecipeName}
+              type="text"
+            />
+          </Label>
+          <Button type="submit">Submit</Button>
+        </form>
+      </>
+    );
   }
 };
 

@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import React from "react";
 import { Title, Text } from "../components/Text";
-import { Card } from "../components/Card";
 
 function Home() {
   return (

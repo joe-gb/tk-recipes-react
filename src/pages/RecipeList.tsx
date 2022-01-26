@@ -18,7 +18,7 @@ function RecipeSearch() {
     return <Loader />;
   }
 
-  if (recipes.length == 0) {
+  if (recipes.length === 0) {
     return (
       <p>
         No recipes match this criteria, why not{" "}

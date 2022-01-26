@@ -1,10 +1,10 @@
 import RecipeService from "../services/Recipe";
 import { useParams, useNavigate, Link } from "react-router-dom";
 import React from "react";
-import { Button, NeutralButton, WarningButton } from "../components/Button";
+import { Button, NeutralButton } from "../components/Button";
 import { Row } from "../components/Layout";
 import { Successbox } from "../components/Messagebox";
-import { Subtitle, Title } from "../components/Text";
+import { Subtitle } from "../components/Text";
 import Loader from "../components/Loader";
 
 function RecipeDelete() {

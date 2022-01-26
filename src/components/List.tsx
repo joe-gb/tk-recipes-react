@@ -1,7 +1,4 @@
-import React from "react";
 import styled from "styled-components";
-import { Ingredient, Recipe } from "../services/Recipe";
-import { SmallSubtitle } from "./Text";
 import { Link } from "react-router-dom";
 
 export const ListItem = styled.div`

@@ -1,4 +1,3 @@
-import React from "react";
 import useAxios from "axios-hooks";
 import { AxiosError } from "axios";
 
@@ -22,7 +21,7 @@ const RecipeService: Function = () => {
   ): [Array<Recipe>, boolean, AxiosError | null] => {
     const name = search ? "&name=" + search : "";
     const [{ data, loading, error }] = useAxios({
-      url: "http://localhost:8000/recipes/" + "?" + update + name,
+      url: `${baseURL}?${update}${name}`,
       method: "GET",
     });
     return [data, loading, error];
@@ -34,7 +33,7 @@ const RecipeService: Function = () => {
   ): [Recipe | undefined, boolean, AxiosError | null, Function] => {
     const [{ data, loading, error }, trigger] = useAxios(
       {
-        url: "http://localhost:8000/recipes/" + id + "/?" + update,
+        url: `${baseURL}${id}/?${update}`,
         method: "GET",
       },
       { manual: manual }
@@ -58,7 +57,7 @@ const RecipeService: Function = () => {
     const trigger: Function = (recipe: Recipe) => {
       update = Date.now();
       triggerCreate({
-        url: recipe.id ? baseURL + recipe.id + "/" : baseURL,
+        url: recipe.id ? `${baseURL}${recipe.id}/` : baseURL,
         method: recipe.id ? "PUT" : "POST",
         data: recipe,
       });
@@ -72,9 +71,9 @@ const RecipeService: Function = () => {
   ): [boolean, boolean, AxiosError | null, Function] => {
     let success = false;
 
-    const [{ data, loading, error, response }, triggerDelete] = useAxios(
+    const [{ loading, error, response }, triggerDelete] = useAxios(
       {
-        url: baseURL + id + "/",
+        url: `${baseURL}${id}/`,
         method: "DELETE",
       },
       { manual: true }
@@ -85,7 +84,7 @@ const RecipeService: Function = () => {
       return triggerDelete();
     };
 
-    if (response && response.status == 204) {
+    if (response && response.status === 204) {
       success = true;
     }
 
