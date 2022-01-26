@@ -76,7 +76,7 @@ test("Test recipe edit", async () => {
 
   // Assert screen matches expected ingredients
   expect(screen.getByText("Strong Sangria")).toBeInTheDocument();
-  expect(screen.getByText("Wine")).toBeInTheDocument();
+  expect(screen.getByText("Red Wine")).toBeInTheDocument();
   expect(screen.getByText("Brandy")).toBeInTheDocument();
   expect(screen.getByText("Orange")).toBeInTheDocument();
   expect(screen.getByText("Sugar")).toBeInTheDocument();
